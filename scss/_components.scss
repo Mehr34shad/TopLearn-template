@@ -1,0 +1,257 @@
+.persian-number {
+  font-family: Samim;
+}
+
+.heading-section {
+  margin-top: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $color-success;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    z-index: -2;
+  }
+  h2 {
+    float: right;
+    font-size: 18px;
+    padding: 5px 0px 5px 20px;
+    margin-top: 0;
+    background-color: #fff;
+  }
+  a {
+    float: left;
+    font-size: 15px;
+    background-color: $color-success;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    &:hover {
+      background-color: darken($color: $color-success, $amount: 7);
+    }
+  }
+}
+.font-size-24 {
+  font-size: 24px;
+}
+.course-box {
+  border: 1px solid $color-gray;
+  margin-top: 20px;
+  background-color: #fff;
+  &:hover {
+    .image-section {
+      .overlay {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+  .image-section {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .overlay {
+      @include flexbox($dir: column);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      @include transition();
+
+      &::after {
+        content: '';
+        width: 20%;
+        height: 80%;
+        border: 1px solid $color-success;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-bottom: none;
+        border-left: none;
+      }
+      &::before {
+        content: '';
+        width: 20%;
+        height: 80%;
+        border: 1px solid $color-success;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        border-top: none;
+        border-right: none;
+      }
+      .items {
+        color: #fff;
+        @include flexbox($j_c: space-around);
+        width: 70%;
+        margin-bottom: 20px;
+      }
+      a {
+        padding: 5px 20px;
+        background-color: $color-success;
+        color: darken($color: $color-success, $amount: 20);
+        border-radius: 20px;
+        &:hover {
+          background-color: darken($color: $color-success, $amount: 6);
+        }
+      }
+    }
+  }
+  .title-section {
+    direction: rtl;
+    border-bottom: 1px solid $color-gray;
+    a {
+      display: inline-block;
+      padding: 10px;
+    }
+  }
+  .statistics-section {
+    .time {
+      float: right;
+      margin: 10px;
+      @include flexbox();
+      i {
+        font-size: 18px;
+        color: darken($color: $color-gray, $amount: 20);
+        padding-left: 5px;
+      }
+    }
+    .price {
+      float: left;
+      background-color: $color-secondary;
+      color: #fff;
+      margin: 8px;
+      padding: 2px 20px;
+      border-radius: 20px;
+    }
+  }
+}
+.colored-background {
+  min-height: 100px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  background: url('/img/site/pattern.png'),
+    linear-gradient(to right, #05e6aa, #1cbdf9);
+}
+.article-box {
+  margin-top: 20px;
+  border: 1px solid $color-gray;
+  background-color: #fff;
+  .image-section {
+    a {
+      display: inline-block;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .description-section {
+    direction: rtl;
+    border-bottom: 1px solid $color-gray;
+    a {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 3px 10px;
+      border-right: 3px solid $color-success;
+    }
+    p {
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+  }
+  .statistics-section {
+    .author {
+      float: right;
+      padding: 15px 10px;
+      i {
+        color: darken($color: $color-gray, $amount: 10);
+        padding-left: 5px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .statistics {
+    float: left;
+    @include flexbox();
+    div {
+      padding: 3px 10px;
+      margin: 12px auto;
+      border-right: 1px solid $color-gray;
+      color: darken($color: $color-gray, $amount: 30);
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+#newsletter-section {
+  #news-letter-description {
+    direction: rtl;
+    margin-top: 40px;
+    h4 {
+      font-weight: bold;
+    }
+  }
+  .newsletter-form {
+    margin-top: 40px;
+    .input-section{
+      float: right;
+      width: 40%;
+      position: relative;
+
+      &:first-child{
+        border-left: 1px solid $color-gray;
+      }
+      input {
+        border: none;
+        direction: rtl;
+        width: 100%;
+        padding: 8px 30px 8px 5px;
+      }
+      i{
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        font-size: 2rem;
+        color: darken($color: $color-gray, $amount: 20);
+      }
+    }
+    .button-section{
+      float: left;
+      width: 20%;
+      button{
+        display: inline-block;
+        width: 100%;
+        background-color: $color-primary;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 8px;
+      }
+    }
+  }
+}
+#suggested-courses{
+  position: relative;
+  .left-parallax{
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 50px;
+  }
+  .right-parallax{
+    position: absolute;
+    width: 100px;
+    right: 0;
+    top: 80px;
+  }
+}

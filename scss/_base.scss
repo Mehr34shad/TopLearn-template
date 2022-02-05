@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Samim;
+    src: url('/fonts/Samim-FD.eot');
+    src: url('/fonts/Samim-FD.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Samim-FD.woff') format('woff'),
+        url('/fonts/Samim-FD.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "IranSanse";
+    src: url("/fonts/IRANSansWeb.eot");
+    src: url("/fonts/IRANSansWeb.eot?#iefix") format("embedded-opentype"), url("/fonts/IRANSansWeb.woff2") format("woff2"),
+        url("/fonts/IRANSansWeb.woff") format("woff"), url("/fonts/IRANSansWeb.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "bnicon";
+    src: url("/fonts/bnicon.eot");
+    src: url("/fonts/bnicon.eot?#iefix") format("embedded-opentype"), url("/fonts/bnicon.woff") format("woff"),
+        url("/fonts/bnicon.ttf") format("truetype");
+}
+
+body {
+    font-family: "IranSanse", Samim, "Tahoma";
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:link {
+    color: $color-primary;
+    text-decoration: none;
+    @include transition();
+}
+
+a:hover {
+    color: $color-secondary;
+}

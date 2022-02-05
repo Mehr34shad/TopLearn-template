@@ -1,0 +1,51 @@
+#footer-links-section {
+  background-color: $color-primary;
+  min-height: 100px;
+  .link-item {
+    direction: rtl;
+    h3 {
+      color: #fff;
+      font-size: 16px;
+      position: relative;
+      &::after {
+        content: '';
+        width: 65%;
+        height: 1px;
+        background-color: gray;
+        position: absolute;
+        top: 10px;
+        left: -5px;
+      }
+    }
+    ul {
+      padding-right: 0;
+      li {
+        padding-top: 10px;
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          border: 1px solid $color-success;
+        }
+        a {
+          color: #fff;
+          padding-right: 10px;
+          &:hover {
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+#copy-right {
+  background-color: darken($color: $color-primary, $amount: 3);
+  .copy-right-text {
+    color: #fff;
+    direction: rtl;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+  }
+}

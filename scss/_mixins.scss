@@ -1,0 +1,32 @@
+@mixin transition($type:ease, $time: .3s) {
+    transition: all $type $time;
+}
+
+@mixin flexbox($dir:row, $j_c:center, $a_i:center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $j_c;
+    align-items: $a_i;
+}
+@mixin right_header_mobile {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    z-index: 999;
+    right: 5px;
+    top: 45px;
+    width: 200px;
+    direction: rtl;
+    padding-right: 0;
+    border-bottom: 3px solid $color-secondary;
+    li {
+      float: none;
+      direction: rtl;
+      &:first-child {
+        padding-right: 10px;
+      }
+      a {
+        border-left: none;
+      }
+    }
+}

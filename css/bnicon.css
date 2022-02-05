@@ -1,0 +1,27 @@
+
+
+[class^="bnicon-"]:before, [class*=" bnicon-"]:before,
+[class^="bnicon-"]:after, [class*=" bnicon-"]:after {   
+  font-family: bnicon;
+  font-style: normal;
+}
+
+.bnicon-circular-arrow-clock:before { content: "\f100"; }
+.bnicon-stopwatch:before { content: "\f101"; }
+.bnicon-open-book:before { content: "\f102"; }
+.bnicon-cogwheel:before { content: "\f103"; }
+.bnicon-technology:before { content: "\f104"; }
+.bnicon-language:before { content: "\f105"; }
+.bnicon-binary-code:before { content: "\f106"; }
+.bnicon-programming:before { content: "\f107"; }
+.bnicon-code:before { content: "\f108"; }
+.bnicon-book-1:before { content: "\f109"; }
+.bnicon-books:before { content: "\f10a"; }
+.bnicon-book:before { content: "\f10b"; }
+.bnicon-telegram:before { content: "\f10c"; }
+.bnicon-study:before { content: "\f10d"; }
+.bnicon-student:before { content: "\f10e"; }
+.bnicon-social:before { content: "\f10f"; }
+.bnicon-open-magazine:before { content: "\f110"; }
+.bnicon-handshake:before { content: "\f111"; }
+.bnicon-money:before { content: "\f112"; }

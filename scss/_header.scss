@@ -1,0 +1,214 @@
+.header_top_right_mobile {
+  @include right_header_mobile();
+}
+#header_top {
+  border-bottom: 1px solid $color-gray;
+  position: relative;
+  ul {
+    li {
+      float: right; //
+      padding: 8px 0;
+      a {
+        font-size: 12px;
+        padding: 0 12px;
+        display: inline-block;
+        border-left: 1px solid $color-gray;
+      }
+      &:first-child {
+        a {
+          padding-right: 0;
+        }
+      }
+      &:last-child {
+        a {
+          border-left: none;
+        }
+      }
+    }
+  }
+  &_right {
+    float: right;
+  }
+  &_left {
+    float: left;
+    li {
+      &:last-child {
+        a {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  #header_top_right_icon {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 2.5rem;
+  }
+  @media only screen and (max-width: 992px) {
+    #header_top_right_icon {
+      display: block;
+    }
+    #header_top_right {
+      @include right_header_mobile();
+    }
+  }
+}
+
+#header_middle {
+  .logo {
+    img {
+      float: right;
+      width: 100px;
+    }
+  }
+  .icon-items {
+    margin-top: 15px;
+    float: left;
+    .item {
+      float: right;
+      margin-right: 20px;
+      a {
+        @include flexbox();
+        font-size: 14px;
+      }
+      i {
+        font-size: 3rem;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+#header_bottom {
+  background-color: $color-primary;
+  nav {
+    float: right;
+    ul {
+      li {
+        float: right;
+        padding: 13px 0;
+        position: relative;
+        a {
+          color: #fff;
+          border-left: 1px solid #425053;
+          display: inline-block;
+          padding: 0 10px;
+          &:hover {
+            color: lighten($color: $color-secondary, $amount: 6);
+          }
+        }
+        &:first-child {
+          a {
+            padding-right: 0;
+          }
+        }
+        &:last-child {
+          a {
+            border-left: none;
+          }
+        }
+        &:hover ul {
+          opacity: 1;
+          visibility: visible;
+        }
+        ul {
+          width: 200px;
+          position: absolute;
+          top: 32px;
+          right: -3px;
+          border-bottom: 3px solid $color-secondary;
+          background-color: $color-primary;
+          opacity: 0;
+          visibility: hidden;
+          @include transition;
+          li {
+            float: none;
+            text-align: right;
+            a {
+              border-left: none;
+              display: inline-block;
+              padding-right: 10px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .telegram {
+    a {
+      color: #fff;
+      background-color: $color-secondary;
+      padding: 13px;
+      display: inline-block;
+      &:hover {
+        background-color: darken($color: $color-secondary, $amount: 10);
+      }
+    }
+  }
+}
+#landing {
+  height: 55vh;
+  background-image: url('/img/site/slide.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 3px solid $color-secondary;
+  .heading {
+    margin-top: 80px;
+    color: #fff;
+    text-align: center;
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2,
+    h3 {
+      font-size: 23px;
+    }
+  }
+  .search-bar {
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 30px;
+    form {
+      position: relative;
+
+      input {
+        width: 100%;
+        display: inline-block;
+        direction: rtl;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+      }
+      button {
+        color: $color-secondary;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .icons{
+    color: #fff;
+    width: 550px;
+    @include flexbox($j_c:space-between);
+    margin: 30px auto;
+    .item{
+      @include flexbox($dir:column);
+      i{
+        font-size: 7rem;
+      }
+      p{
+        font-size: 20px;
+        direction: rtl;
+      }
+    }
+  }
+}
