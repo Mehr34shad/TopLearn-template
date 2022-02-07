@@ -337,6 +337,17 @@ a:hover {
   top: 80px;
 }
 
+.box-shadow {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0 0 7px 0 #eaeff4;
+  -moz-box-shadow: 0 0 7px 0 #eaeff4;
+  -webkit-box-shadow: 0 0 7px 0 #eaeff4;
+  border: 1px solid #ecf0f4;
+  background-color: #fff;
+}
+
 .header_top_right_mobile {
   display: none;
   position: absolute;
@@ -678,5 +689,21 @@ a:hover {
   text-align: center;
   padding: 15px 0;
   margin: 0;
+}
+
+#inner {
+  margin-top: 50px;
+  direction: rtl;
+}
+
+#inner .history-item {
+  margin: 30px 35px;
+}
+
+#inner .history-item p {
+  font-size: 14px;
+  line-height: 32px;
+  text-align: justify;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=main.css.map */
